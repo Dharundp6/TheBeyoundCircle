@@ -4,62 +4,31 @@ import { BackgroundPattern } from './BackgroundPattern';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 bg-gradient-to-br from-amber-300 via-orange-400 to-amber-500 overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center pt-20 bg-[#f5e6d3] overflow-hidden">
       {/* Background Pattern overlay */}
-      <BackgroundPattern opacity={0.15} color="#7c2d12" />
+      <BackgroundPattern opacity={0.05} color="#7c2d12" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Column: Copy */}
           <div className="text-center lg:text-left space-y-8">
-            <div className="inline-flex items-center space-x-2 bg-white/30 backdrop-blur-sm border border-white/40 rounded-full px-4 py-1.5 text-sm font-bold text-gray-900 shadow-sm">
-              <span className="flex h-2 w-2 rounded-full bg-brand-red animate-pulse"></span>
-              <span>Waitlist closing soon for Batch 3</span>
+            <div className="flex items-center space-x-2 text-sm font-bold text-brand-red uppercase tracking-wide">
+              <span className="flex h-2 w-2 rounded-full bg-brand-red"></span>
+              <span>INDIA'S FIRST PREMIUM CREATORPRENEUR COMMUNITY</span>
             </div>
-            
-            <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tight leading-[1.1]">
-              India's First <br />
-              <span className="text-white drop-shadow-md">Premium Community</span> <br />
-              for <span className="text-brand-red underline decoration-4 decoration-white/30 underline-offset-4">Creatorpreneurs</span>
+
+            <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tight leading-[1.15]">
+              Stop Just<br />
+              Creating.<br />
+              <span className="text-brand-red">Start<br />
+              Building.</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-800 font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Stop playing the algorithm game alone. Join the top 1% of creators building sustainable 7-figure businesses.
-            </p>
-
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-              <button className="w-full sm:w-auto px-8 py-4 bg-brand-red text-white rounded-xl font-bold text-lg hover:bg-red-700 transition-all shadow-xl hover:shadow-2xl flex items-center justify-center space-x-2 transform hover:-translate-y-1">
+              <button className="w-full sm:w-auto px-8 py-4 bg-gray-900 text-white rounded-full font-bold text-lg hover:bg-gray-800 transition-all shadow-xl hover:shadow-2xl flex items-center justify-center space-x-2 transform hover:-translate-y-1">
                 <span>Apply for Membership</span>
-                <ArrowRight size={20} />
               </button>
-              <button className="w-full sm:w-auto px-8 py-4 bg-white/20 backdrop-blur-md border-2 border-white/40 text-gray-900 rounded-xl font-bold text-lg hover:bg-white/30 transition-all flex items-center justify-center">
-                View Member Stories
-              </button>
-            </div>
-
-            {/* Social Proof */}
-            <div className="pt-4 flex items-center justify-center lg:justify-start space-x-4">
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map((i) => (
-                  <img 
-                    key={i}
-                    src={`https://picsum.photos/100/100?random=${i + 10}`} 
-                    alt="Member" 
-                    className="w-10 h-10 rounded-full border-2 border-amber-400"
-                  />
-                ))}
-              </div>
-              <div className="text-sm font-semibold text-gray-900">
-                <div className="flex text-yellow-900">
-                  <Star size={14} fill="currentColor" />
-                  <Star size={14} fill="currentColor" />
-                  <Star size={14} fill="currentColor" />
-                  <Star size={14} fill="currentColor" />
-                  <Star size={14} fill="currentColor" />
-                </div>
-                500+ Top Creators Joined
-              </div>
             </div>
           </div>
 

@@ -22,21 +22,23 @@ export const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="text-2xl font-black tracking-tight leading-none text-gray-900">
-              THE <br />
-              <span className="text-brand-red text-3xl">Beyond</span> CIRCLE<span className="text-brand-red">.</span>
+          <div className="flex items-center space-x-3">
+            <div className="bg-gradient-to-br from-orange-400 to-orange-500 rounded-xl p-3 shadow-md">
+              <div className="text-white text-sm font-black leading-tight">
+                Beyond<br />
+                Circle
+              </div>
             </div>
           </div>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-gray-700 hover:text-brand-red font-medium transition-colors">About</a>
             <a href="#benefits" className="text-gray-700 hover:text-brand-red font-medium transition-colors">Benefits</a>
-            <a href="#members" className="text-gray-700 hover:text-brand-red font-medium transition-colors">Members</a>
-            <a href="#faq" className="text-gray-700 hover:text-brand-red font-medium transition-colors">FAQ</a>
-            <button className="bg-brand-red text-white px-6 py-2.5 rounded-full font-bold hover:bg-red-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-              Apply Now
+            <a href="#mentors" className="text-gray-700 hover:text-brand-red font-medium transition-colors">Mentors</a>
+            <a href="#roi" className="text-gray-700 hover:text-brand-red font-medium transition-colors">ROI</a>
+            <a href="#hubs" className="text-gray-700 hover:text-brand-red font-medium transition-colors">Hubs</a>
+            <button className="bg-gray-900 text-white px-6 py-2.5 rounded-full font-bold hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+              Apply for Membership
             </button>
           </div>
 
@@ -55,11 +57,12 @@ export const Header: React.FC = () => {
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white absolute top-full left-0 w-full shadow-lg py-4 px-6 flex flex-col space-y-4">
-          <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 font-medium">About</a>
           <a href="#benefits" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 font-medium">Benefits</a>
-          <a href="#members" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 font-medium">Members</a>
-          <button className="bg-brand-red text-white w-full py-3 rounded-xl font-bold">
-            Apply Now
+          <a href="#mentors" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 font-medium">Mentors</a>
+          <a href="#roi" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 font-medium">ROI</a>
+          <a href="#hubs" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 font-medium">Hubs</a>
+          <button className="bg-gray-900 text-white w-full py-3 rounded-xl font-bold">
+            Apply for Membership
           </button>
         </div>
       )}
